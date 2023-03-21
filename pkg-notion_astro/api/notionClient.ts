@@ -1,7 +1,6 @@
 import { Client, LogLevel } from '@notionhq/client';
 import { config } from 'dotenv';
 
-const dotenv = require("dotenv")
 config();
 
 export function getNotionClient(): Client {
