@@ -4,6 +4,9 @@
   functions = "netlify/functions"
   publish = "dist"
 
+  [build.rollupOptions.external]
+    package = "pkg-notion_astro"
+
 [[plugins]] 
   package = "netlify-plugin-cypress"
 
