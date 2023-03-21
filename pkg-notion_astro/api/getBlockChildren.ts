@@ -1,14 +1,16 @@
 import { Client } from '@notionhq/client';
 
+const dotenv = require("dotenv")
+dotenv.config()
 // get notion client object
 const notion = getNotionClient();
-//export function getNotionClient() {
-//  const notion = new Client({
-//    auth: process.env.NOTION_API_KEY,
-//  });
+export function getNotionClient() {
+  const notion = new Client({
+    auth: process.env.NOTION_API_KEY,
+  });
 
-//  return notion;
-//}
+  return notion;
+}
 
 
 export async function getBlockChildren(blockId: string) {
