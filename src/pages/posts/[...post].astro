@@ -2,8 +2,8 @@
 import PostLayout from '../../layouts/PostLayout.astro';
 import PostHeader from '../../components/PostHeader.astro';
 
-import { generateStaticPaths } from '@selfyi/astro-notion/api';
-import { Notion } from '@selfyi/astro-notion/components';
+import { generateStaticPaths } from '@selfyi/pkg-notion_astro/api';
+import { Notion } from '@selfyi/pkg-notion_astro/components';
 
 export async function getStaticPaths() {
   const data = await generateStaticPaths();
