@@ -1,4 +1,4 @@
-import { getNotionClient, getDatabaseId } from './notionClient';
+import { getNotionClient, getDatabaseId } from '@notionhq/client';
 import { getPlainText, getPostDate } from './utils';
 import {
   GetDatabaseResponse,
