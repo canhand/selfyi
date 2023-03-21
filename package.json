@@ -18,6 +18,7 @@
   "dependencies": {
     "cypress": "^10.0.3",
     "@notionhq/client": "^1.0.4",
+    "@selfyi/astro-notion": "workspace:^0.1.2",
     "astro-icon": "^0.7.1",
     "astro-imagetools": "^0.6.9"
   }
