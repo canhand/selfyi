@@ -24,7 +24,7 @@ export interface Block {
 
 export async function getBlockChildren(blockId: string): Promise<Block[]> {
   try {
-    const blocks = Block[] = [];
+    const blocks: Block[] = [];
     let has_more_blocks = true;
     let cursor: string;
     const max_page_limit = 100;
