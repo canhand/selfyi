@@ -1,7 +1,8 @@
 import { Client } from '@notionhq/client';
+import { config } from 'dotenv';
 
-const dotenv = require("dotenv")
-dotenv.config()
+//const dotenv = require("dotenv")
+config();
 // get notion client object
 const notion = getNotionClient();
 export function getNotionClient() {
@@ -12,10 +13,18 @@ export function getNotionClient() {
   return notion;
 }
 
+export interface Block {
+  object: string;
+  id: string;
+  created_time: string;
+  last_edited_time: string;
+  has_children: boolean;
+  [key: string]: any;
+}
 
-export async function getBlockChildren(blockId: string) {
+export async function getBlockChildren(blockId: string): Promise<Block[]> {
   try {
-    const blocks = [];
+    const blocks = Block[] = [];
     let has_more_blocks = true;
     let cursor: string;
     const max_page_limit = 100;
@@ -35,5 +44,6 @@ export async function getBlockChildren(blockId: string) {
     return blocks;
   } catch (error) {
     console.error(error);
+    return[];
   }
 }
