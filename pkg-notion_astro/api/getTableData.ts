@@ -35,7 +35,7 @@ export async function getTableData(
     const { includeDraft } = props;
     const databaseId = getDatabaseId();
     const notion = getNotionClient();
-
+    console.log;
     // this filters out the draft posts by default
     const queryObj = {
       database_id: databaseId,
@@ -54,6 +54,7 @@ export async function getTableData(
     return cleanedData;
   } catch (error) {
     console.error(error);
+    return[];
   }
 }
 
