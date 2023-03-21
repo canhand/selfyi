@@ -1,18 +1,23 @@
 {
-  "name": "@example/basics",
+  "name": "@canhand/self-hosted-astro-notion-blog",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier -w ."
   },
   "devDependencies": {
     "astro": "^1.0.0",
-    "prettier-plugin-astro": "^0.8.0"
+    "prettier": "^2.6.2",
+    "prettier-plugin-astro": "^0.8.0",
+    "sass": "^1.52.2"
   },
   "dependencies": {
-    "cypress": "^10.0.3"
+    "cypress": "^10.0.3",
+    "@notionhq/client": "^1.0.4",
+    "astro-imagetools": "^0.6.9"
   }
 }
