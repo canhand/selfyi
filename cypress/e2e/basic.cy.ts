@@ -5,7 +5,7 @@ describe('empty spec', () => {
 
   it('displays the resources text', () => {
     cy.get('h1')
-    .contains('');
+    .contains('First-ever-post');
   })
   it('renders the image', () => {
     cy.get('img')
