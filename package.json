@@ -1,25 +1,8 @@
 {
-  "name": "@canhand/self-hosted-astro-notion-blog",
-  "version": "0.0.1",
+  "type": "module",
   "private": true,
+  "description": "The root directory for astro-notion package",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "format": "prettier -w ."
-  },
-  "devDependencies": {
-    "astro": "^1.0.0",
-    "prettier": "^2.6.2",
-    "prettier-plugin-astro": "^0.8.0",
-    "sass": "^1.52.2"
-  },
-  "dependencies": {
-    "cypress": "^10.0.3",
-    "@notionhq/client": "^1.0.4",
-    "@selfyi/astro-notion": "workspace^0.1.2",
-    "astro-icon": "^0.7.1",
-    "astro-imagetools": "^0.6.9"
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

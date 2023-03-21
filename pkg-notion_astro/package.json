@@ -1,5 +1,5 @@
 {
-  "name": "@selfyi/astro-notion",
+  "name": "@selfyi/pkg-notion_astro",
   "description": "Data fetching tool that connects Astro and Notion",
   "type": "module",
   "version": "0.1.3",
@@ -14,9 +14,9 @@
     "astro-component"
   ],
   "author": {
-    "name": "Joohoon Cha",
-    "email": "",
-    "url": ""
+    "name": "canhand",
+    "email": "pandacanthug@pm.me",
+    "url": "https://github.com/canhand"
   },
   "scripts": {
     "dev": "astro dev",
