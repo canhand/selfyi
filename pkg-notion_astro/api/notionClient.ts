@@ -1,5 +1,6 @@
 import { Client, LogLevel } from '@notionhq/client';
-
+const dotenv = require("dotenv")
+dotenv.config()
 export function getNotionClient(): Client {
   const notion_token = import.meta.env.NOTION_API_KEY;
 
