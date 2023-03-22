@@ -14,7 +14,7 @@ const { post: postUrl } = Astro.params;
 const { pages, pageData, blocks } = Astro.props;
 ---
 
-<PostLayout {pages} {pageData} {postUrl}>
+<PostLayout pages={pages} pageData={pageData} postUrl={postUrl}>
   <article>
     <PostHeader {pageData} />
     <Notion {blocks} />
