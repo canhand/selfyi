@@ -1,0 +1,31 @@
+---
+const correctPassphrase = 'your-secret-passphrase';
+---
+<div id="passphrase-protect">
+  <form id="passphrase-form">
+    <label for="passphrase">Enter passphrase to view content:</label>
+    <input id="passphrase" type="password" />
+    <button type="submit">Submit</button>
+  </form>
+  <div id="protected-content" style="display:none">
+    <slot />
+  </div>
+</div>
+
+<script type="module">
+  const passphraseForm = document.getElementById('passphrase-form');
+  const passphraseInput = document.getElementById('passphrase');
+  const protectedContent = document.getElementById('protected-content');
+  const correctPassphrase = passphraseForm.getAttribute('data-correct-passphrase');
+
+  passphraseForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('submitted value:', passphraseInput.value);
+    if (passphraseInput.value === correctPassphrase) {
+      passphraseForm.style.display = 'none';
+      protectedContent.style.display = 'block';
+    } else {
+      alert('Incorrect passphrase. Please try again.');
+    }
+  });
+</script>
