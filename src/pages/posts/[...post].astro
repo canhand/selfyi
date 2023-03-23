@@ -5,6 +5,8 @@ import PostHeader from '../../components/PostHeader.astro';
 import { generateStaticPaths } from '@selfyi/pkg-notion_astro/api';
 import { Notion } from '@selfyi/pkg-notion_astro/components';
 
+import PassphraseProtect from '../../components/PassphraseProtect.astro';
+
 export async function getStaticPaths() {
   const data = await generateStaticPaths();
   return data;
@@ -13,16 +15,17 @@ export async function getStaticPaths() {
 const { post: postUrl } = Astro.params;
 const { pages, pageData, blocks } = Astro.props;
 ---
-
-<PostLayout pages={pages} pageData={pageData} postUrl={postUrl}>
-  <article>
-    <PostHeader {pageData} />
-    <Notion {blocks} />
-  </article>
-</PostLayout>
+<PassphraseProtect>
+  <PostLayout pages={pages} pageData={pageData} postUrl={postUrl}>
+    <article>
+      <PostHeader {pageData} />
+      <Notion {blocks} />
+    </article>
+  </PostLayout>
 
 <style lang="scss">
-  article > * {
-    line-height: 1.625;
-  }
-</style>
+    article > * {
+      line-height: 1.625;
+    }
+  </style>
+</PassphraseProtect>
