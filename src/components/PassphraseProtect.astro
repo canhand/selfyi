@@ -1,7 +1,8 @@
 ---
-const correctPassphrase = 'your-secret-passphrase';
+const correctPassphrase = 'mlmlml';
 ---
-<div id="passphrase-protect">
+<!DOCTYPE html>
+<div id="passphrase-protect" data-correct-passphrase={correctPassphrase}>
   <form id="passphrase-form">
     <label for="passphrase">Enter passphrase to view content:</label>
     <input id="passphrase" type="password" />
@@ -20,6 +21,7 @@ const correctPassphrase = 'your-secret-passphrase';
 
   passphraseForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    console.log('needed', correctPassphrase);
     console.log('submitted value:', passphraseInput.value);
     if (passphraseInput.value === correctPassphrase) {
       passphraseForm.style.display = 'none';
