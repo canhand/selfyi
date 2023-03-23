@@ -2,8 +2,8 @@
 const correctPassphrase = 'mlmlml';
 ---
 <!DOCTYPE html>
-<div id="passphrase-protect" data-correct-passphrase={correctPassphrase}>
-  <form id="passphrase-form">
+<div id="passphrase-protect">
+  <form id="passphrase-form" data-correct-passphrase={correctPassphrase}>
     <label for="passphrase">Enter passphrase to view content:</label>
     <input id="passphrase" type="password" />
     <button type="submit">Submit</button>
